@@ -54,6 +54,9 @@
        function reduction() {
            const request = new XMLHttpRequest(); 
            request.open("GET", "displayAll.php", true); 
+           request.setRequestHeader("Content-Type", "application/json");
+
+
            request.onload = function () {
                if (this.status == 200) {
                    let oportunity = JSON.parse(this.responseText); 
@@ -61,25 +64,25 @@
                    
                    for (let i in oportunity) {
 if(oportunity[i].reduction=="Yes"){//*** only show the ones with a price reduction***************************
-                       result += `<div class="col mb-5">
-            <a class="card text-decoration-none" href="details.php?id=${oportunity[i].id}">
-               
-                <div class="overflow-hidden shadow product-holder">
+                       result += `<div class="col mb-5 ">
+            
+                <div class="overflow-hidden shadow product-holder ">
                     <img class="card-img-top w-100 product-cover"
                     src="..\\picture\\${oportunity[i].image} "
                         alt="..." />
-                </div>
-               
-                <div class="card-body p-4">
-                    <h5 class="card-title w-100 font-weight-bolder">${oportunity[i].address}
+                        <h5 class="card-title w-100 font-weight-bolder ms-3 ">${oportunity[i].address}
 </h5>
-                    <p class="m-0">Area ${oportunity[i].area} &#13217</p>
-                    <p class="m-0">Price ${oportunity[i].price} $</p>
-                    <p class="m-0">reduction ${oportunity[i].reduction} </p>
+                    <p class="ms-3">Area ${oportunity[i].area} &#13217</p>
+                    <p class="ms-3">Price ${oportunity[i].price} $</p>
+                    <p class="ms-3">reduction ${oportunity[i].reduction} </p>
+
+                        <a class="btn btn-warning text-decoration-none mt-2 mb-2 ms-3" href="details.php?id=${oportunity[i].id}">details</a>
+                </div>
+            
 
                  
-                </div>
-            </a>
+                
+            
         </div>
 
     </div>

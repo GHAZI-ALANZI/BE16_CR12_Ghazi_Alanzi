@@ -1,6 +1,6 @@
-<?php require_once "..\components\bootstrap.php";
-require_once "..\components\\navbar.php";
-require_once "..\components\\db_connect.php";
+<?php require_once "../components/bootstrap.php";
+require_once "../components/navbar.php";
+require_once "../components/db_connect.php";
 
 ?>
 
@@ -146,6 +146,6 @@ echo $card='<div class="container">
 </div>';}
 
 
- require_once "..\components\\footer.php";
+ require_once "../components/footer.php";
 
 ?>

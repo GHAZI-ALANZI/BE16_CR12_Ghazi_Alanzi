@@ -1,10 +1,10 @@
 <?php
 
-require_once "..\components\bootstrap.php";
-require_once "..\components\\db_connect.php";
+require_once "../components/bootstrap.php";
+require_once "../components/db_connect.php";
 
 
-require_once ".\uploud.php";?>
+require_once "./uploud.php";?>
 
 <div class='card  border-0 text-light'>
     <div class='row g-0'>

@@ -1,10 +1,10 @@
 <?php
 
-require_once "..\components\bootstrap.php";
-require_once "..\components\\db_connect.php";
+require_once "../components/bootstrap.php";
+require_once "../components/db_connect.php";
 
 
-require_once ".\uploud.php";
+require_once "./uploud.php";
 
 
 
@@ -83,6 +83,7 @@ echo $table="
         
         $sql=" INSERT INTO `lacasamia`( `image`, `address`, `latitude`, `longitude`, `reduction`, `describtion`, `price`, `status`, `area`) VALUES ('$img','$address','$latitude','$longitude','$reduction','$description','$price','$status','$area')";
         $result = mysqli_query($conn, $sql);
+        header("location:success_create.php");
         
 
 }

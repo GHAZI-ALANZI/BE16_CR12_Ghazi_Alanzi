@@ -1,10 +1,11 @@
 <?php
+require_once "../components/bootstrap.php";
+require_once "../components/db_connect.php";
 
-require_once "..\components\bootstrap.php";
-require_once "..\components\\db_connect.php";
+
+require_once "./uploud.php";
 
 
-require_once ".\uploud.php";
 
 
 $id=$_GET['id'];
@@ -51,22 +52,21 @@ echo $table="
                 name='latitude'> 
                 </h4>
                 <hr>
-                <h4 class='card-title'>Reduction: <select name='reduction'>
-                <option value='Yes'name='reduction'>Yes</option>
-                <option value='No'name='reduction'>No</option>
-                
-              </select></h4>
+                <hr>
+                <h4 class='card-title'>reduction: <input type='text' class='bg-dark text-light' value='{$row["reduction"]}'
+
+                    name='reduction'> </h4>
+
                 <hr>
                 <h4 class='card-title'>Price: <input type='text' class='bg-dark text-light' value='{$row["price"]}' 
                 name='price'>
                 </h4>
                 <hr>
-                <h4 class='card-title'>Status: <select name='status'>
-                <option value='Available'name='status'>Available</option>
-                <option value='Not available'name='status'>Not available</option>
+                <h4 class='card-title'>status: <input type='text' class='bg-dark text-light' value='{$row["status"]}' 
+                name='status'>
+                </h4>
                 
-              </select>
-                </h4><hr>
+                <hr>
                 <button type='submit' class='btn btn-warning mb-3'name='update'><h4>update</h4></button>
 <a href='cpanel_adm.php' class='btn btn-success mb-3'><h4>back</h4></a>
             </div>

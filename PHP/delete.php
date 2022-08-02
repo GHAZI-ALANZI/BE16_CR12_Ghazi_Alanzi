@@ -1,11 +1,11 @@
 <?php
-require_once "..\components\bootstrap.php";
-require_once "..\components\\db_connect.php";
+require_once "../components/bootstrap.php";
+require_once "../components/db_connect.php";
 
 $id = $_GET["id"];
 
 if (isset($_POST["submit"])) {
-    $sql = "DELETE FROM biglibrary WHERE id = $id";
+    $sql = "DELETE FROM lacasamia WHERE id = $id";
 
     $result = mysqli_query($conn, $sql);
 

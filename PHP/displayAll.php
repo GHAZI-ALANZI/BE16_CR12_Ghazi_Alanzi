@@ -1,6 +1,8 @@
 <?php
 
-require_once "..\components\\db_connect.php";
+require_once "../components/db_connect.php";
+
+header("Content-Type:application/json");
 
 
 $sql = "SELECT * FROM lacasamia";

@@ -1,7 +1,7 @@
 <?php
-require_once "..\components\bootstrap.php";
-require_once "..\components\\navbar.php";
-require_once "..\components\\db_connect.php";
+require_once "../components/bootstrap.php";
+require_once "../components/navbar.php";
+require_once "../components/db_connect.php";
 
 
 
@@ -26,21 +26,22 @@ $card='';
 if(mysqli_num_rows($result)  > 0) {    
    while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
 echo $card='<div class="col mb-2">
-            <a class="card text-decoration-none" href="details.php?id='.$row["id"].'">
                
                 <div class="overflow-hidden shadow product-holder">
                     <img class="card-img-top w-100 product-cover"
                         src="..\picture\\'.$row["image"].'"
                         alt="..." />
+                        <h5 class="card-title w-100 font-weight-bolder ms-3">'.$row['address'].'</h5>
+                        <p class="m-0 ms-3">Area ' .$row['area'].' &#13217</p>
+                        <p class="m-0 ms-3">Price' .$row['price'].' $</p>
+                        <a class="btn btn-warning text-decoration-none mt-2 mb-2 ms-3" href="details.php?id='.$row["id"].'">details</a>
+
                 </div>
                
-                <div class="card-body p-4">
-                    <h5 class="card-title w-100 font-weight-bolder">'.$row['address'].'</h5>
-                    <p class="m-0">Area ' .$row['area'].' &#13217</p>
-                    <p class="m-0">Price' .$row['price'].' $</p>
+                
+                   
                  
-                </div>
-            </a>
+                
         </div>
 
 
@@ -49,4 +50,4 @@ echo $card='<div class="col mb-2">
     </div>
 
 </div>
-<?php require_once "..\components\\footer.php";
+<?php require_once "../components/footer.php";

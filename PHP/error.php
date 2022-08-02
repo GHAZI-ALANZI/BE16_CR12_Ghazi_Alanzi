@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Error</title>
-    <?php require_once "..\components\bootstrap.php";
+    <?php require_once "../components/bootstrap.php";
 ?>
 </head>
 
